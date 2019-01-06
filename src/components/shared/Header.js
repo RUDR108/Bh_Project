@@ -9,13 +9,13 @@ class Header extends React.Component{
 constructor(){
   super()
 
-  //this.handleLogout = this.handleLogout.bind(this)
+  this.handleLogout = this.handleLogout.bind(this)
 }
 
-// handleLogout(){
-// this.props.logout()
-// this.props.history.push('/rentals')
-// }
+handleLogout(){
+this.props.logout()
+this.props.history.push('/rentals')
+}
 
 // render
 renderLinkButton(isAuth){
