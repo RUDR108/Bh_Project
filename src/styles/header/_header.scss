@@ -1,15 +1,13 @@
-.navbar {
+
+ 
+  .navbar {
     padding: 20px;
-    margin-bottom: 40px;
-    background-color: $main-black-color;
-  
-    .bwm-search {
-      height: 50px;
-      width: 300px !important;
-    }
-  
-    .navbar-brand {
-      margin-right: 30px;
+   background-color: $main-black-color;
+  .navbar-brand {
+      @media screen and (max-width: 775px) {
+        display:none;
+      }
+      margin-right: 0px;
       font-size: 27px;
       letter-spacing: 1px;
       color: $main-color !important;
@@ -18,36 +16,111 @@
       img {
         height:28px;
         margin-left:-5px;
+        
       }
+  }
+
+  .navbar-brand-image {
+    @media screen and (min-width: 775px) {
+      display:none;
     }
+    
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: $main-color !important;
+    font-weight: 500;
+
+    img {
+      height:50px;
+      margin-left:-5px;
+      float:left;
+    }
+}
+
+
   
     .nav-item {
       font-size: 14px;
     }
+
+    .form-inline {
+        //display: block;
+        @media screen and (max-width: 510px) {
+          width: 200px;
+          height:50px;
+          
+        }
+      
+      .bwm-search {
+        @media screen and (max-width: 510px) {
+          width: 170px;
+        }
+        height: 50px;
+        width: 300px;
+      }
+      .btn-bwm-search {
+        @media screen and (max-width: 560px) {
+          display:none;
+        }
+        border-color: $main-color;
+        color: $main-color;
+    
+        &:hover, &:focus, &:active {
+          background-color: transparent !important;
+          border-color: $main-color !important;
+          color: $main-color !important;
+          box-shadow: none;
+        }
+      }
   
-    .btn-bwm-search {
-      border-color: $main-color;
-      color: $main-color;
-  
-      &:hover, &:focus, &:active {
-        background-color: transparent !important;
-        border-color: $main-color !important;
-        color: $main-color !important;
-        box-shadow: none;
+      .btn-bwm-search-small {
+        @media screen and (min-width: 560px) {
+         display:none;
+        }
+        border-color: $main-color;
+        color: $main-color;
+        height:50px;
+        float:right;
+        width:30px;
+    
+        &:hover, &:focus, &:active {
+          background-color: transparent !important;
+          border-color: $main-color !important;
+          color: $main-color !important;
+          box-shadow: none;
+        }
       }
     }
+    
   
     .nav-item {
-      color: $main-white-color;
+      color: black;
     }
 
     .dropdown-menu{
       .dropdown-item{
         font-size:14px;
         &:active{
-          background-color:$main-color;
+          background-color:lightgray;
         }
       }
     }
   }
   
+
+
+
+// $break-small: 320px;
+// $break-large: 1200px;
+
+// .profile-pic {
+//   float: left;
+//   width: 250px;
+//   @media screen and (max-width: $break-small) {
+//     width: 100px;
+//     float: none;
+//   }
+//   @media screen and (min-width: $break-large) {
+//     float: right;
+//   }
+// }
