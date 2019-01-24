@@ -10,12 +10,15 @@ export class RentalDetail extends React.Component{
    componentWillMount(){
         
       const rentalId=this.props.match.params.id
+   
       this.props.dispatch(fetchRentalById(rentalId))
+   
    }
 
    render(){
       const rental=this.props.rental;
       if(rental._id){
+
          return(
             <section id='rentalDetails'>
   <div className='upper-section'>
