@@ -42,6 +42,7 @@ export const fetchRentals = (city) => {
 export const fetchRentalById=(rentalId)=>{
     return (dispatch)=>{
         axios.get(`/rentals/${rentalId}`).then((res)=>{
+        debugger;
         return res.data
         }).then((rental)=>{
             dispatch(fetchRentalByIdSuccess(rental))
