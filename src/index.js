@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap-daterangepicker/daterangepicker.css'
 import 'react-toastify/dist/ReactToastify.min.css'
 import 'react-sticky-header/styles.css'
+import 'rsuite/dist/styles/rsuite.min.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

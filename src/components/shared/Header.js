@@ -2,13 +2,13 @@ import React from 'react'
 import {Link,withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import RentalSearchInput from 'components/rentals/RentalSearchInput' 
-//import StickyHeader from 'react-sticky-header';
+import { StickyContainer, Sticky } from 'react-sticky'; 
+
 
 class Header extends React.Component{
 
 constructor(){
   super()
-
   this.handleLogout = this.handleLogout.bind(this)
 }
 
@@ -22,13 +22,14 @@ renderLinkButton(isAuth){
 
   if(isAuth){
     return <p className='nav-item nav-link clickable' onClick={this.handleLogout}>Logout</p>
- 
+    
   }
 
   return (
     <React.Fragment>
-    <Link className='nav-item nav-link' to='/login'>Login <span className='sr-only'>(current)</span></Link>
-    <Link className='nav-item nav-link' to='/register'>Register</Link>
+    <Link className='nav-item nav-link'  style={{color:"black"}} to='/login'>Login <span className='sr-only'>(current)</span></Link>
+    <Link className='nav-item nav-link' style={{color:"black"}} to='/register'>Register</Link>
+    
     </React.Fragment>)
 }
 
@@ -53,19 +54,19 @@ if(isAuth){
   }
 }
 
-  render(){
+render(){
     const {username,isAuth} = this.props.auth
     return (
-        <nav className='navbar navbar-dark navbar-expand-lg'>
-        <div className='container'>
+        <nav className='navbar navbar-dark navbar-expand-lg' >
+       <div className='container-fluid'>
+       
           <Link className='navbar-brand' to='/rentals'>BookWithMe
           <img src={process.env.PUBLIC_URL+'/img/react-logo.svg'} alt=""/>
           </Link>
-          <Link className='navbar-brand-image' to='/rentals'>
+          <Link className='navbar-brand-image center-md' to='/rentals'>
           <img  src={process.env.PUBLIC_URL+'/img/react-logo.svg'} alt=""/>
           </Link>
          
-          <RentalSearchInput />
           <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
@@ -79,7 +80,8 @@ if(isAuth){
               </div>
           </div>
         </div>
-      </nav> 
+        <hr />
+      </nav>
       )
   }
  

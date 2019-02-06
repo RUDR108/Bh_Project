@@ -1,49 +1,43 @@
-
- 
-  .navbar {
-    padding: 20px;
-   background-color: $main-black-color;
+.navbar {
+   width:100%;
+   background-color:white;
+  
+   
   .navbar-brand {
       @media screen and (max-width: 775px) {
         display:none;
       }
       margin-right: 0px;
-      font-size: 27px;
+      font-size: 20px;
       letter-spacing: 1px;
       color: $main-color !important;
       font-weight: 500;
 
       img {
-        height:28px;
+        height:20px;
         margin-left:-5px;
         
       }
-  }
+}
 
   .navbar-brand-image {
     @media screen and (min-width: 775px) {
       display:none;
     }
-    
+    text-align: center;
     font-size: 27px;
     letter-spacing: 1px;
     color: $main-color !important;
     font-weight: 500;
 
     img {
-      height:50px;
+      height:35px;
       margin-left:-5px;
       float:left;
     }
 }
 
-
-  
-    .nav-item {
-      font-size: 14px;
-    }
-
-    .form-inline {
+.form-inline {
         //display: block;
         @media screen and (max-width: 510px) {
           width: 200px;
@@ -91,23 +85,25 @@
         }
       }
     }
-    
-  
-    .nav-item {
-      color: black;
+
+  .nav-item {
+      font-size: 14px;
     }
 
-    .dropdown-menu{
+  .navbar-toggler{
+    background-color: black;
+    display:none;
+  }  
+    
+.dropdown-menu{
       .dropdown-item{
         font-size:14px;
         &:active{
-          background-color:lightgray;
+          background-color:black;
         }
       }
     }
   }
-  
-
 
 
 // $break-small: 320px;

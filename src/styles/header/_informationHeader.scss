@@ -1,0 +1,32 @@
+.informationHeader{
+    width:100%;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom:20px;
+    padding-top:25px;
+    .profilePic{
+        @media screen and (max-width: 785px) {
+            margin:0;
+          }
+
+    }
+    .textContainer{
+        @media screen and (max-width: 785px) {
+            display:none;
+          }
+    }
+    @media screen and (max-width: 785px) {
+        .col-md-3{width: 20%;}     
+      }
+     .headText{
+        &:hover, &:focus, &:active {
+            background-color: transparent !important;
+            border-color: $main-color !important;
+            color: $main-color !important;
+            box-shadow: none;
+          }
+          &:hover{
+              cursor: pointer;
+          }
+     } 
+}

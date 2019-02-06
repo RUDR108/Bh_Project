@@ -1,10 +1,14 @@
 @import 'variables.scss';
 @import 'header/header.scss';
+@import 'header/informationHeader.scss';
 @import 'form/form.scss';
 @import 'rentals/rental-listing.scss';
 @import 'rentals/rental-detail.scss';
 @import 'booking/booking.scss';
 @import 'rentals/rental-manage.scss';
+@import 'footer/footer.scss';
+@import 'sidebar.scss';
+//@import 'sidenav/sidenav.scss';
 
 .clickable{
     &:hover{
