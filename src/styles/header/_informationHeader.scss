@@ -15,10 +15,26 @@
             display:none;
           }
     }
-    @media screen and (max-width: 785px) {
-        .col-md-3{width: 20%;}     
-      }
+
+    .container__row{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        @media screen and (min-width: 785px) {
+     display: none;
+        }
+    }
+    .container__col-3{
+        flex-basis:20%;
+        @media screen and (min-width: 785px) {
+     display:none;
+        }
+    }
+       
      .headText{
+         color:white;
+         border-right: 1px solid white;
+    
         &:hover, &:focus, &:active {
             background-color: transparent !important;
             border-color: $main-color !important;
