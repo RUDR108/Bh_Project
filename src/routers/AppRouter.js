@@ -14,6 +14,7 @@ import RentalManage from '../components/rentals/rentalManage'
 import BookingManage from '../components/booking/bookingManage'
 import InformationHeader from '../components/shared/informationHeader'
 import SidebarHeader from '../components/shared/headerWithSideNav'
+import PersonalHomePage from '../components/personalPage/personalPage'
 
 const AppRouter=(props)=>{
  return(
@@ -22,7 +23,7 @@ const AppRouter=(props)=>{
         <div className="container-fluid">
         <div class="row">
         <Header logout={props.logout}/> 
-        <SidebarHeader />
+       
         </div>
       </div>
       <InformationHeader />
@@ -30,6 +31,7 @@ const AppRouter=(props)=>{
           <Switch>
             <Route exact path='/' render={()=><Redirect to='/rentals'/>}/>
             <Route path="/rentals" component={RentalListing} exact />
+            <Route path="/home" component={PersonalHomePage} exact />
             <ProtectedRoute path="/rentals/new" component={RentalCreate} exact />
             <ProtectedRoute path="/rentals/manage" component={RentalManage} exact />
             <ProtectedRoute path="/bookings/manage" component={BookingManage} exact />

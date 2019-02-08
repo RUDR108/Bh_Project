@@ -29,7 +29,10 @@ renderLinkButton(isAuth){
     <React.Fragment>
     <Link className='nav-item nav-link'  style={{color:"black"}} to='/login'>Login <span className='sr-only'>(current)</span></Link>
     <Link className='nav-item nav-link' style={{color:"black"}} to='/register'>Register</Link>
-    
+    <Link className='nav-item nav-link'  style={{color:"black"}} to='/home'>Home</Link>
+    <Link className='nav-item nav-link' style={{color:"black"}} to='/rooms'>Search</Link>
+    <Link className='nav-item nav-link'  style={{color:"black"}} to='/chat'>Chat</Link>
+    <Link className='nav-item nav-link' style={{color:"black"}} to='/profile'>Profile</Link>
     </React.Fragment>)
 }
 
@@ -54,6 +57,22 @@ if(isAuth){
   }
 }
 
+renderToggleButton(isAuth){
+  return(
+    <div className="nav-item dropdown dropleft" style={{float:"right"}} >
+    <a className="nav-item nav-link dropdown-toggle clickable" style={{backgroundColor:'orange'}} id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i className="fa fa-bars"></i>
+    </a>
+    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <Link className="dropdown-item" to="/rentals/new">Create Rental</Link>
+      <Link className="dropdown-item" to="/rentals/manage">Manage Rentals</Link>
+      <Link className="dropdown-item" to="/bookings/manage">Manage Bookings</Link>
+    </div>
+  </div>
+  )
+
+}
+
 render(){
     const {username,isAuth} = this.props.auth
     return (
@@ -76,10 +95,13 @@ render(){
             <a className='nav-item nav-link' >{username}</a>
           }
            {this.renderLinkButton(isAuth)}
-           {this.renderOwnerSection(isAuth)}              
+           {this.renderOwnerSection(isAuth)}             
+           
               </div>
           </div>
+          
         </div>
+        {this.renderToggleButton(isAuth)}
         <hr />
       </nav>
       )

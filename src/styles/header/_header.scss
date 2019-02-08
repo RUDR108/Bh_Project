@@ -1,7 +1,10 @@
 .navbar {
    width:100%;
    background-color:white;
-  
+   @media screen and (max-width: 775px) {
+    background-color:orange;
+  }
+
    
   .navbar-brand {
       @media screen and (max-width: 775px) {
@@ -88,6 +91,13 @@
 
   .nav-item {
       font-size: 14px;
+      &:hover, &:focus, &:active {
+        background-color: transparent !important;
+        border-color: $main-color !important;
+        color: $main-color !important;
+        box-shadow: none;
+        border-bottom:1px solid $main-color;
+      }
     }
 
   .navbar-toggler{
