@@ -18,15 +18,15 @@ render(){
     </div></Link>
     <Link to="/rooms" style={{textDecoration:'none'}}>
     <div className="searchButton headText col-md-3 container__col-3">
-    <center><p>Search</p></center>
+    <center><p>Blogs</p></center>
     </div></Link>
     <Link to="/chat" style={{textDecoration:'none'}}>
     <div className="ChatButton headText col-md-3 container__col-3" >
-    <center><p>Chat</p></center>
+    <center><p>About</p></center>
     </div></Link>
     <Link to="/profile" style={{textDecoration:'none'}}>
     <div className="ChatButton headText col-md-3 container__col-3">
-    <center><p>Profile</p></center>
+    <center><p>New</p></center>
     </div></Link>
     </div> 
    </div>

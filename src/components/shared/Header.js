@@ -30,8 +30,8 @@ renderLinkButton(isAuth){
     <Link className='nav-item nav-link'  style={{color:"black"}} to='/login'>Login <span className='sr-only'>(current)</span></Link>
     <Link className='nav-item nav-link' style={{color:"black"}} to='/register'>Register</Link>
     <Link className='nav-item nav-link'  style={{color:"black"}} to='/home'>Home</Link>
-    <Link className='nav-item nav-link' style={{color:"black"}} to='/rooms'>Search</Link>
-    <Link className='nav-item nav-link'  style={{color:"black"}} to='/chat'>Chat</Link>
+    <Link className='nav-item nav-link' style={{color:"black"}} to='/rooms'>Blogs</Link>
+    <Link className='nav-item nav-link'  style={{color:"black"}} to='/chat'>About</Link>
     <Link className='nav-item nav-link' style={{color:"black"}} to='/profile'>Profile</Link>
     </React.Fragment>)
 }
